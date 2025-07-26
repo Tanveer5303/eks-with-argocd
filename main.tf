@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "eks" {
-  source = "./modules/eks"
+  source = "./modules/aws-eks"
 
   cluster_name      = var.cluster_name
   cluster_version   = var.cluster_version
@@ -14,5 +14,5 @@ module "eks" {
   max_capacity      = var.max_capacity
   min_capacity      = var.min_capacity
   node_instance_type = var.node_instance_type
-  ssh_key_name      = var.ssh_key_name
+ # ssh_key_name      = var.ssh_key_name
 }
