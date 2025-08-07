@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"eks","Source":"./modules/aws-eks","Dir":"modules/aws-eks"},{"Key":"eks-access","Source":"./modules/aws-access-entry","Dir":"modules/aws-access-entry"},{"Key":"eks-access-entry","Source":"./modules/aws-access-entry","Dir":"modules/aws-access-entry"}]}
