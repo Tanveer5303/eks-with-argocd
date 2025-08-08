@@ -11,12 +11,12 @@ resource "aws_eks_node_group" "this" {
     min_size     = var.min_capacity
   }
 
-  #remote_access {
-  #  ec2_ssh_key               = var.ssh_key_name
-  #  source_security_group_ids = [aws_security_group.node_sg.id]
-  #}
-
   instance_types = [var.node_instance_type]
+
+   tags = {
+    Name        = "${var.cluster_name}-ng"
+    Environment = "dev"
+  }
 
   depends_on = [aws_iam_role_policy_attachment.node_policies]
 }

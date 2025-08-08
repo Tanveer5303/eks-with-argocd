@@ -21,6 +21,9 @@ module "eks-access-entry" {
   source        = "./modules/aws-access-entry"
   cluster_name  = module.eks.cluster_name
   node_role_arn = module.eks.node_role_arn
+  depends_on = [
+    module.eks  # <- ensures EKS cluster and role exist before access is set
+  ]
 }
 
 #module "argocd" {
